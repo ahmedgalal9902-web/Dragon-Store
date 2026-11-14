@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DRAGON Store</title>
+<meta name="theme-color" content="#060608">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+<!-- ============ INTRO ============ -->
+<div id="intro" aria-label="Dragon intro">
+  <canvas id="introCv"></canvas>
+  <svg id="eye" viewBox="0 0 400 200" aria-hidden="true">
+    <defs>
+      <radialGradient id="iris" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="#fff1a8"/><stop offset=".25" stop-color="#ffb300"/>
+        <stop offset=".55" stop-color="#ff4d00"/><stop offset=".85" stop-color="#a80000"/>
+        <stop offset="1" stop-color="#2a0000"/>
+      </radialGradient>
+      <clipPath id="lid"><path d="M8 100 Q200 -30 392 100 Q200 230 8 100Z"/></clipPath>
+    </defs>
+    <g id="eyeG">
+      <path d="M8 100 Q200 -30 392 100 Q200 230 8 100Z" fill="#0a0000" stroke="#ff4d00" stroke-width="2.5"/>
+      <g clip-path="url(#lid)">
+        <circle cx="200" cy="100" r="80" fill="url(#iris)"/>
+        <g id="fibers"></g>
+        <ellipse id="pupil" cx="200" cy="100" rx="11" ry="72" fill="#000"/>
+        <ellipse cx="178" cy="78" rx="9" ry="5" fill="#fff" opacity=".55" transform="rotate(-30 178 78)"/>
+      </g>
+    </g>
+  </svg>
+  <div id="flash"></div>
+  <div class="intro-sub"><b>WEAR THE FIRE</b><span>FW26 · DROP 01</span></div>
+  <div class="intro-load"><span id="ldNum">0</span>%<i><u id="ldBar"></u></i></div>
+  <button id="skip" type="button">Skip ›</button>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="logo" href="#hero" aria-label="DRAGON">
+    <svg viewBox="0 0 40 20" width="30" height="15" aria-hidden="true"><path d="M1 10Q20-4 39 10Q20 24 1 10Z" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="20" cy="10" rx="2.2" ry="7" fill="currentColor"/></svg>
+    DRAGON
+  </a>
+  <nav class="links">
+    <a href="#grid">Collection</a>
+    <a href="#featured">Most Wanted</a>
+    <a href="#about">About</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" type="button" aria-label="Cart">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1.2 11H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="badge" id="cartCount">0</span>
+  </button>
+</header>
+
+<main id="smooth">
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-word" aria-hidden="true">DRAGON</div>
+  <canvas id="heroCv"></canvas>
+  <div class="hero-fallback" id="heroFb" hidden><img id="heroFbImg" alt=""></div>
+  <div class="hero-top">
+    <span class="pill">FW26 · DROP 01</span>
+    <h1>WEAR THE <em>FIRE</em></h1>
+    <p>Streetwear with a dragon’s spirit — 23 pieces of gothic graphics and heavyweight silhouettes.</p>
+  </div>
+  <div class="hero-bar">
+    <button class="arrow" id="hPrev" type="button" aria-label="Previous">←</button>
+    <div class="hero-info">
+      <small id="hIdx">01 / 15</small>
+      <strong id="hName">—</strong>
+      <span id="hPrice">—</span>
+      <button class="btn" id="hOpen" type="button">View in 3D</button>
+    </div>
+    <button class="arrow" id="hNext" type="button" aria-label="Next">→</button>
+  </div>
+  <div class="drag-hint">Drag to spin the collection</div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" dir="ltr" aria-hidden="true">
+  <div class="mq-track" id="mq">
+    <span>DRAGON ✦ WEAR THE FIRE ✦ FW26 ✦ HOODIES ✦ PANTS ✦ TEES ✦ JACKETS ✦</span>
+    <span>DRAGON ✦ WEAR THE FIRE ✦ FW26 ✦ HOODIES ✦ PANTS ✦ TEES ✦ JACKETS ✦</span>
+  </div>
+</div>
+
+<!-- ============ GRID ============ -->
+<section class="sec" id="grid">
+  <div class="sec-head" data-reveal>
+    <div>
+      <small>THE COLLECTION</small>
+      <h2>The Collection</h2>
+    </div>
+    <div class="tools">
+      <div class="chips" id="chips" role="tablist"></div>
+      <select id="sort" aria-label="Sort">
+        <option value="def">Featured</option>
+        <option value="lo">Price: low to high</option>
+        <option value="hi">Price: high to low</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid" id="products"></div>
+</section>
+
+<!-- ============ FEATURED (pinned horizontal scroll) ============ -->
+<section class="hs" id="featured">
+  <div class="hs-title" aria-hidden="true">MOST<br>WANTED</div>
+  <div class="hs-track" id="hsTrack" dir="ltr"></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec about" id="about">
+  <div class="sec-head" data-reveal><div><small>WHY DRAGON</small><h2>Why Dragon?</h2></div></div>
+  <div class="feats">
+    <div class="feat" data-reveal><b>01</b><h3>Graphics with attitude</h3><p>Gothic prints and wide cuts you won’t find everywhere.</p></div>
+    <div class="feat" data-reveal><b>02</b><h3>Heavy street style</h3><p>Hoodies, pants and jackets built to be worn every day and noticed.</p></div>
+    <div class="feat" data-reveal><b>03</b><h3>Order in a minute</h3><p>Pick the piece, pick the size, confirm — we’ll contact you.</p></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-word" aria-hidden="true">DRAGON</div>
+  <p>© 2026 DRAGON — All rights reserved</p>
+</footer>
+</main>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal" id="pm" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="pm-box" role="dialog" aria-modal="true" aria-labelledby="pmName">
+    <button class="x" type="button" data-close aria-label="Close">✕</button>
+    <div class="pm-stage">
+      <canvas id="pvCv"></canvas>
+      <img id="pmImg" alt="" hidden>
+      <div class="pm-hint">Drag the piece to move it</div>
+    </div>
+    <div class="pm-info" data-lenis-prevent>
+      <small id="pmCat"></small>
+      <h3 id="pmName"></h3>
+      <div class="price-row"><b id="pmPrice"></b><s id="pmOld"></s></div>
+      <p id="pmDesc"></p>
+      <div class="lbl">Size</div>
+      <div class="sizes" id="pmSizes"></div>
+      <div class="lbl">Quantity</div>
+      <div class="qty"><button type="button" id="qMinus">−</button><span id="qVal">1</span><button type="button" id="qPlus">+</button></div>
+      <button class="btn big" id="pmAdd" type="button">Add to cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="drawer-wrap" id="dw" aria-hidden="true">
+  <div class="modal-bg" data-close-cart></div>
+  <aside class="drawer" data-lenis-prevent>
+    <div class="dr-head"><h3>Your cart</h3><button class="x flat" type="button" data-close-cart aria-label="Close">✕</button></div>
+    <div class="dr-body" id="cartItems"></div>
+    <div class="dr-foot" id="cartFoot">
+      <div class="tot"><span>Total</span><b id="cartTotal">0</b></div>
+      <button class="btn big" id="toCheckout" type="button">Checkout</button>
+    </div>
+    <form class="checkout" id="co" hidden>
+      <h4>Delivery details</h4>
+      <input name="name" placeholder="Full name" required autocomplete="name">
+      <input name="phone" placeholder="Phone number" required inputmode="tel" pattern="[0-9+ ]{10,15}" autocomplete="tel">
+      <input name="city" placeholder="City / Governorate" required>
+      <input name="addr" placeholder="Full address" required>
+      <button class="btn big" type="submit">Place order</button>
+      <button class="link" type="button" id="coBack">Back to cart</button>
+    </form>
+    <div class="done" id="done" hidden>
+      <div class="tick">✓</div>
+      <h4>Order received</h4>
+      <p>Order no. <b id="orderNo"></b></p>
+      <p class="mut">We’ll call you to confirm shipping.</p>
+      <button class="btn" type="button" data-close-cart>Keep shopping</button>
+    </div>
+  </aside>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="shaders.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
