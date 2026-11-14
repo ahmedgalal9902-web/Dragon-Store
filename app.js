@@ -13,29 +13,29 @@ const CAT = { hoodie: 'Hoodies', pants: 'Pants', tee: 'Tees', jacket: 'Jackets',
 
 /* ---------------------------------------------------------------- DATA */
 const PRODUCTS = [
-  { id: 1,  img: 'img/p01.jpg', name: 'ABYSS ZIP HOODIE',   cat: 'hoodie', price: 1850, badge: 'Best seller', desc: 'Grey zip hoodie with a black gothic graphic across the chest. Oversized fit with front pockets.' },
-  { id: 2,  img: 'img/p02.jpg', name: 'ASH FADE HOODIE',    cat: 'hoodie', price: 1650, old: 1950, badge: 'New', desc: 'Black hoodie with a smoky grey fade, kangaroo pocket and a relaxed, wide fit.' },
-  { id: 3,  img: 'img/p03.jpg', name: 'NOIR CARRIAGE TEE',  cat: 'tee',    price: 1000, desc: 'Oversized black tee with a classic white graphic on the chest.' },
-  { id: 4,  img: 'img/p04.jpg', name: 'FALLEN ANGEL PANTS', cat: 'pants',  price: 2150, badge: 'Limited', desc: 'Wide black pants with a fallen-angel graphic in white and red down the leg.' },
-  { id: 5,  img: 'img/p05.jpg', name: 'WHITE THORN PANTS',  cat: 'pants',  price: 1950, desc: 'White sweatpants with black gothic thorn graphics down both sides.' },
-  { id: 6,  img: 'img/p06.jpg', name: 'NAVY THORN PANTS',   cat: 'pants',  price: 1950, desc: 'The thorn design on deep navy. Wide cut with a drawstring waist.' },
-  { id: 7,  img: 'img/p07.jpg', name: 'ARCH LOGO TEE',      cat: 'tee',    price: 1090, desc: 'Oversized black tee with an arched graphic across the chest.' },
-  { id: 8,  img: 'img/p08.jpg', name: 'STORM PARACHUTE',    cat: 'pants',  price: 1750, old: 2100, badge: 'New', desc: 'Wide black parachute pants with white side piping and a light, crisp fabric.' },
-  { id: 9,  img: 'img/p09.jpg', name: 'BLACKOUT PUFFER',    cat: 'jacket', price: 2655, badge: 'Limited', desc: 'Black puffer jacket with a high collar and front pockets. Winter warmth, street attitude.' },
-  { id: 10, img: 'img/p10.jpg', name: 'STONE COLLEGE TEE',  cat: 'tee',    price: 1150, desc: 'Oversized grey tee with a collegiate graphic in burgundy detail.' },
-  { id: 11, img: 'img/p11.jpg', name: 'SMOKE THORN PANTS',  cat: 'pants',  price: 1950, desc: 'Grey sweatpants with black gothic thorn graphics.' },
-  { id: 12, img: 'img/p12.jpg', name: 'SHADOW CARGO JEANS', cat: 'pants',  price: 2250, badge: 'Best seller', desc: 'Washed black cargo jeans with large side pockets and a wide cut.' },
-  { id: 13, img: 'img/p13.jpg', name: 'DRAGON KATAKANA',    cat: 'hoodie', price: 1890, badge: 'Best seller', desc: 'Charcoal hoodie with Japanese katakana on the chest. Oversized with a kangaroo pocket.' },
-  { id: 14, img: 'img/p14.jpg', name: 'MILANO RACING',      cat: 'jacket', price: 2450, badge: 'Limited', desc: 'Black and white racing jacket with a zip collar and printed sleeves.' },
-  { id: 15, img: 'img/p15.jpg', name: 'CLOUD WIDE PANTS',   cat: 'pants',  price: 1690, desc: 'Wide grey sweatpants with a raised puff print down the leg.' },
-  { id: 16, img: 'img/p16.jpg', name: 'BAT TRACKSUIT SET',  cat: 'set',    price: 2400, badge: 'New', desc: 'Black two-piece tracksuit with white piping and a bat emblem. Jacket and pants.' },
-  { id: 17, img: 'img/p17.jpg', name: 'CHICAGO LEATHER',    cat: 'jacket', price: 2550, badge: 'Limited', desc: 'Burgundy faux-leather varsity jacket with script embroidery and a ribbed hem.' },
-  { id: 18, img: 'img/p18.jpg', name: 'DARK ROSE TEE',      cat: 'tee',    price: 1250, desc: 'Oversized white tee with a blackletter rose graphic and tribal sleeve prints.' },
-  { id: 19, img: 'img/p19.jpg', name: 'RELIC LAYERED TEE',  cat: 'tee',    price: 1350, badge: 'New', desc: 'Black layered long-sleeve tee with an all-over distressed gothic collage print.' },
-  { id: 20, img: 'img/p20.jpg', name: 'DEMON HOODIE',       cat: 'hoodie', price: 1950, badge: 'Best seller', desc: 'Light grey oversized hoodie with a red-eyed fanged demon across the front.' },
-  { id: 21, img: 'img/p21.jpg', name: 'BLUSH ZIP HOODIE',   cat: 'hoodie', price: 1790, desc: 'Pink full-zip hoodie with a face-covering hood and a small embroidered star.' },
-  { id: 22, img: 'img/p22.jpg', name: 'ICE ZIP HOODIE',     cat: 'hoodie', price: 1790, desc: 'Pale blue full-zip hoodie with a face-covering hood and chest embroidery.' },
-  { id: 23, img: 'img/p23.jpg', name: 'PUFF ZIP HOODIE',    cat: 'hoodie', price: 2050, badge: 'New', desc: 'Black zip hoodie with raised white puff-print lettering down the sleeve.' },
+  { id: 1,  img: 'p01.jpg', name: 'ABYSS ZIP HOODIE',   cat: 'hoodie', price: 1850, badge: 'Best seller', desc: 'Grey zip hoodie with a black gothic graphic across the chest. Oversized fit with front pockets.' },
+  { id: 2,  img: 'p02.jpg', name: 'ASH FADE HOODIE',    cat: 'hoodie', price: 1650, old: 1950, badge: 'New', desc: 'Black hoodie with a smoky grey fade, kangaroo pocket and a relaxed, wide fit.' },
+  { id: 3,  img: 'p03.jpg', name: 'NOIR CARRIAGE TEE',  cat: 'tee',    price: 1000, desc: 'Oversized black tee with a classic white graphic on the chest.' },
+  { id: 4,  img: 'p04.jpg', name: 'FALLEN ANGEL PANTS', cat: 'pants',  price: 2150, badge: 'Limited', desc: 'Wide black pants with a fallen-angel graphic in white and red down the leg.' },
+  { id: 5,  img: 'p05.jpg', name: 'WHITE THORN PANTS',  cat: 'pants',  price: 1950, desc: 'White sweatpants with black gothic thorn graphics down both sides.' },
+  { id: 6,  img: 'p06.jpg', name: 'NAVY THORN PANTS',   cat: 'pants',  price: 1950, desc: 'The thorn design on deep navy. Wide cut with a drawstring waist.' },
+  { id: 7,  img: 'p07.jpg', name: 'ARCH LOGO TEE',      cat: 'tee',    price: 1090, desc: 'Oversized black tee with an arched graphic across the chest.' },
+  { id: 8,  img: 'p08.jpg', name: 'STORM PARACHUTE',    cat: 'pants',  price: 1750, old: 2100, badge: 'New', desc: 'Wide black parachute pants with white side piping and a light, crisp fabric.' },
+  { id: 9,  img: 'p09.jpg', name: 'BLACKOUT PUFFER',    cat: 'jacket', price: 2655, badge: 'Limited', desc: 'Black puffer jacket with a high collar and front pockets. Winter warmth, street attitude.' },
+  { id: 10, img: 'p10.jpg', name: 'STONE COLLEGE TEE',  cat: 'tee',    price: 1150, desc: 'Oversized grey tee with a collegiate graphic in burgundy detail.' },
+  { id: 11, img: 'p11.jpg', name: 'SMOKE THORN PANTS',  cat: 'pants',  price: 1950, desc: 'Grey sweatpants with black gothic thorn graphics.' },
+  { id: 12, img: 'p12.jpg', name: 'SHADOW CARGO JEANS', cat: 'pants',  price: 2250, badge: 'Best seller', desc: 'Washed black cargo jeans with large side pockets and a wide cut.' },
+  { id: 13, img: 'p13.jpg', name: 'DRAGON KATAKANA',    cat: 'hoodie', price: 1890, badge: 'Best seller', desc: 'Charcoal hoodie with Japanese katakana on the chest. Oversized with a kangaroo pocket.' },
+  { id: 14, img: 'p14.jpg', name: 'MILANO RACING',      cat: 'jacket', price: 2450, badge: 'Limited', desc: 'Black and white racing jacket with a zip collar and printed sleeves.' },
+  { id: 15, img: 'p15.jpg', name: 'CLOUD WIDE PANTS',   cat: 'pants',  price: 1690, desc: 'Wide grey sweatpants with a raised puff print down the leg.' },
+  { id: 16, img: 'p16.jpg', name: 'BAT TRACKSUIT SET',  cat: 'set',    price: 2400, badge: 'New', desc: 'Black two-piece tracksuit with white piping and a bat emblem. Jacket and pants.' },
+  { id: 17, img: 'p17.jpg', name: 'CHICAGO LEATHER',    cat: 'jacket', price: 2550, badge: 'Limited', desc: 'Burgundy faux-leather varsity jacket with script embroidery and a ribbed hem.' },
+  { id: 18, img: 'p18.jpg', name: 'DARK ROSE TEE',      cat: 'tee',    price: 1250, desc: 'Oversized white tee with a blackletter rose graphic and tribal sleeve prints.' },
+  { id: 19, img: 'p19.jpg', name: 'RELIC LAYERED TEE',  cat: 'tee',    price: 1350, badge: 'New', desc: 'Black layered long-sleeve tee with an all-over distressed gothic collage print.' },
+  { id: 20, img: 'p20.jpg', name: 'DEMON HOODIE',       cat: 'hoodie', price: 1950, badge: 'Best seller', desc: 'Light grey oversized hoodie with a red-eyed fanged demon across the front.' },
+  { id: 21, img: 'p21.jpg', name: 'BLUSH ZIP HOODIE',   cat: 'hoodie', price: 1790, desc: 'Pink full-zip hoodie with a face-covering hood and a small embroidered star.' },
+  { id: 22, img: 'p22.jpg', name: 'ICE ZIP HOODIE',     cat: 'hoodie', price: 1790, desc: 'Pale blue full-zip hoodie with a face-covering hood and chest embroidery.' },
+  { id: 23, img: 'p23.jpg', name: 'PUFF ZIP HOODIE',    cat: 'hoodie', price: 2050, badge: 'New', desc: 'Black zip hoodie with raised white puff-print lettering down the sleeve.' },
 ];
 const FEATURED = [13, 9, 4, 14, 12];
 const byId = id => PRODUCTS.find(p => p.id === id);
@@ -699,6 +699,8 @@ $('#qPlus').addEventListener('click', () => { curQty = Math.min(9, curQty + 1); 
 $('#pmAdd').addEventListener('click', () => { addToCart(cur.id, curSize, curQty); closeProduct(); setTimeout(() => openCart(), 350); });
 
 /* ---------------------------------------------------------------- CART */
+// Paste your Formspree form URL here, e.g. 'https://formspree.io/f/abcdwxyz'. Leave empty for demo mode.
+const ORDER_ENDPOINT = 'https://formspree.io/f/mwlovzjp';
 let cart = [];
 try { cart = JSON.parse(localStorage.getItem('dragon_cart') || '[]').filter(i => byId(i.id)); } catch (e) { cart = []; }
 const saveCart = () => { try { localStorage.setItem('dragon_cart', JSON.stringify(cart)); } catch (e) { /* noop */ } };
@@ -747,10 +749,35 @@ $('#cartItems').addEventListener('click', e => {
 });
 $('#toCheckout').addEventListener('click', () => view('co'));
 $('#coBack').addEventListener('click', () => view('cart'));
-$('#co').addEventListener('submit', e => {
+$('#co').addEventListener('submit', async e => {
   e.preventDefault();
-  $('#orderNo').textContent = 'DRG-' + Math.floor(10000 + Math.random() * 90000);
-  cart = []; saveCart(); renderCart(); view('done'); e.target.reset();
+  const f = e.target, btn = $('#coBtn'), err = $('#coErr');
+  err.hidden = true;
+  const no = 'DRG-' + Math.floor(10000 + Math.random() * 90000);
+  const items = cart.map(i => ({ name: byId(i.id).name, size: i.size, qty: i.qty, price: byId(i.id).price }));
+  const total = cartTotal();
+  const summary = items.map(i => `- ${i.name} | size ${i.size} | qty ${i.qty} | EGP ${i.price}`).join('\n');
+  const payload = {
+    _subject: `New order ${no} - EGP ${total} - ${f.name.value.trim()}`,
+    order_no: no, items: summary, total: 'EGP ' + total,
+    name: f.name.value.trim(), phone: f.phone.value.trim(), city: f.city.value.trim(),
+    address: f.addr.value.trim(), notes: f.notes.value.trim(), _gotcha: f.website.value
+  };
+  if (ORDER_ENDPOINT) {
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const r = await fetch(ORDER_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) });
+      if (!r.ok) throw new Error('bad status ' + r.status);
+    } catch (x) {
+      err.textContent = 'Something went wrong sending your order. Please try again.';
+      err.hidden = false; btn.disabled = false; btn.textContent = 'Place order';
+      return;
+    }
+    btn.disabled = false; btn.textContent = 'Place order';
+  }
+  $('#demoNote').hidden = !!ORDER_ENDPOINT;
+  $('#orderNo').textContent = no;
+  cart = []; saveCart(); renderCart(); view('done'); f.reset();
 });
 addEventListener('keydown', e => { if (e.key === 'Escape') { if (modalOpen) closeProduct(); else closeCart(); } });
 
